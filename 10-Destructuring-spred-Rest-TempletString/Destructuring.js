@@ -117,3 +117,49 @@ function sum(...numbers) {
 }
 
 console.log(sum(1, 2, 3)); // 6
+
+
+// Rest in distructuring
+let [first1, ...rest] = [10, 20, 30, 40];
+console.log(first1); // 10
+console.log("rest: " + rest);  // [20, 30, 40]
+
+
+// Object distructuring 
+
+let { name1, ...otherDetails } = { name1: "Maruf", age: 25, city: "Sylhet" };
+console.log(name1);         // Maruf
+console.log(otherDetails); // { age: 25, city: "Sylhet" }
+console.log(typeof(otherDetails));
+
+//===============================================//
+
+// You're given a user profile object:
+
+
+
+const profile = {
+  name2: "Mustak",
+  age: 25,
+  city: "Sylhet",
+  profession: "Developer"
+};
+
+// Tasks:
+// Use object destructuring with the rest operator to:
+// Extract name and collect the rest of the properties into a new object called otherInfo.
+// Create a new profile object that:
+// Has all the original data from profile
+// Adds a new field: country: "Bangladesh"
+// Use the spread operator for this.
+
+let { name2, ...otherInfo} = profile;
+
+console.log("Profile Name: " + name2);
+console.log("Other Information: ", otherInfo);
+
+let newProfile = {...profile};
+
+newProfile.country = "Bangladesh";
+
+console.log("New Profile: ", newProfile);
