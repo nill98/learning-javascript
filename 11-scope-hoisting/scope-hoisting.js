@@ -27,3 +27,16 @@ function greet() {
 }
 
 greet();
+
+
+
+// =================== Hoisting ================ // 
+
+console.log(x);
+var x = 20;
+
+{
+  let y = 5;
+  console.log(y);
+}
+console.log(y);
