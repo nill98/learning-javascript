@@ -163,3 +163,5 @@ let newProfile = {...profile};
 newProfile.country = "Bangladesh";
 
 console.log("New Profile: ", newProfile);
+
+// "practiced Destructuring,Spread,rest"
