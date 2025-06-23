@@ -29,3 +29,12 @@ const firstInfo = document.querySelector(".info");
 console.log(firstInfo);
 const allInfos = document.querySelectorAll(".info");
 console.log(allInfos);
+
+//============= InnerText =================//
+
+console.log(document.getElementById("para").innerText); // "Hello"
+console.log(document.getElementById("para").textContent); // "Hello Hidden"
+
+//Gets or sets the HTML content inside the element.
+console.log(document.getElementById("box").innerHTML); // "<strong>Bold</strong> text"
+box.innerHTML = "<em>pushing New content</em>";
