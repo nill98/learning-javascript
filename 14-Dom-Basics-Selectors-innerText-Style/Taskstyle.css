@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  transition: background 1s, color 1s;
+}
+
+.normal-mode {
+  background-image: linear-gradient(rgb(137, 225, 245), rgb(238, 207, 130));
+  background-repeat: no-repeat;
+}
+.reverse-mode {
+  background-image: linear-gradient(rgb(238, 207, 130), rgb(137, 225, 245));
+  background-repeat: no-repeat;
+}
+.white-mode {
+  background-image: linear-gradient(rgb(253, 253, 251), rgb(238, 238, 238));
+  background-repeat: no-repeat;
+}
+.heading {
+  margin: 10px;
+  text-align: center;
+  border: 1px solid;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.428);
+  border-radius: 10px;
+}
+
+button {
+  padding: 5px 20px;
+  width: auto;
+  background-color: blue;
+  color: aliceblue;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: blueviolet;
+}
