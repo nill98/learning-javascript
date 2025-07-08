@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center; /* center vertically */
+        background-color: #f0f0f0; /* optional */
+        flex-direction: column;
+      }
+
+      #myBtn {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      #userName {
+        padding: 12px 24px;
+        line-height: 50px;
+        font-size: 16px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="myBtn">Click Me</button>
+
+    <select id="colorPicker">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <input type="text" id="userName" placeholder="Enter username" />
+
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="Email" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <script src="Events.js"></script>
+  </body>
+</html>
