@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Traversal</title>
+    <style>
+      /* default list styling */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        margin: 4px 0;
+        cursor: pointer;
+      }
+
+      /* highlight style applied temporarily */
+      .highlight {
+        background: yellow;
+        transition: background 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="child">Hello</p>
+    </div>
+
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+
+    <div>
+      <p id="one">First</p>
+      <p id="two">Second</p>
+    </div>
+
+    <div id="box">
+      <p>Hello</p>
+      <!-- a comment -->
+    </div>
+
+    <h3>Click any item 👇</h3>
+    <ul id="flavors">
+      <li>Chocolate</li>
+      <li>Vanilla</li>
+      <li>Strawberry</li>
+      <li>Mango</li>
+      <li>Pistachio</li>
+    </ul>
+
+    <script src="Traversal.js"></script>
+  </body>
+</html>
