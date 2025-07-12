@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manupulating Classes</title>
+
+    <style>
+      .dark {
+        background-color: black;
+      }
+
+      .drawer {
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+      }
+      .drawer.open {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Reasons We Use It: Toggle styles (e.g. light/dark mode, themes) Show/hide
+      elements (e.g. modals, dropdowns) Indicate state (e.g. active tab,
+      selected item, error field) Trigger animations (via CSS transitions)
+      Re-use CSS instead of rewriting styles in JS
+    </p>
+    <button id="btn">Toggle Dark Mode</button>
+
+    <button id="menuBtn">Menu</button>
+    <nav id="drawer" class="drawer">…</nav>
+
+    <script src="manupulating-classes.js"></script>
+  </body>
+</html>
