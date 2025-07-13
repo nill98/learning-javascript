@@ -3,7 +3,7 @@ console.log(inputText);
 const list = document.getElementById("list-container");
 
 function addTask() {
-  if (inputText.value === "") {
+  if (inputText.value.trim() === "") {
     alert("You must write something...!");
   } else {
     let li = document.createElement("li");

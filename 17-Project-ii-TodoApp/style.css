@@ -25,9 +25,9 @@ body {
 }
 
 .heading {
-  display: flex; /* children line up left‑to‑right */
-  align-items: center; /* vertical alignment */
-  gap: 0.5rem; /* spacing between <h4> and <img> */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 20px;
 }
 
