@@ -15,6 +15,7 @@ function addTask() {
     li.appendChild(cross);
   }
   inputText.value = "";
+  saveData();
 }
 
 list.addEventListener(
@@ -25,6 +26,17 @@ list.addEventListener(
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
     }
+    saveData();
   },
   false
 );
+
+saveData = () => {
+  localStorage.setItem("data", list.innerHTML);
+};
+
+showData = () => {
+  list.innerHTML = localStorage.getItem("data");
+};
+
+showData();
