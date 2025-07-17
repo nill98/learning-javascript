@@ -64,6 +64,16 @@ parsedStudent.forEach((s) => {
   console.log(`Name: ${s.name}`, `Roll: ${s.roll}`, `Gender: ${s.gender}`);
 });
 
-parsedStudent.forEach((s) => {
-  console.log(`Name: ${s.name}`, `Roll: ${s.roll}`, `Gender: ${s.gender}`);
+// Save to localStorage
+localStorage.setItem("studentList", studentJson);
+
+// Get data from localStorage
+const getData = localStorage.getItem("studentList");
+const parsedStudent2 = JSON.parse(getData);
+
+parsedStudent2.forEach((s) => {
+  console.log(`Name2: ${s.name}`, `Roll2: ${s.roll}`, `Gender2: ${s.gender}`);
 });
+
+localStorage.removeItem("studentList"); // Deletes only studentList
+localStorage.clear(); // Deletes all keys
