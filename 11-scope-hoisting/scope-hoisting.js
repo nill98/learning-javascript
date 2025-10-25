@@ -1,4 +1,4 @@
-console.log ("scope / hoisting check");
+console.log("scope / hoisting check");
 
 // Block Scope (let, const)
 
@@ -8,7 +8,6 @@ console.log ("scope / hoisting check");
 // }
 // console.log(x); // ❌ Error: x is not defined
 
-
 // Function Scope (var)
 
 // function test() {
@@ -16,7 +15,6 @@ console.log ("scope / hoisting check");
 //   console.log(y); // ✅ works here
 // }
 // console.log(y); // ❌ Error: y is not defined
-
 
 // Global Scope
 
@@ -28,9 +26,7 @@ function greet() {
 
 greet();
 
-
-
-// =================== Hoisting ================ // 
+// =================== Hoisting ================ //
 
 console.log(x);
 var x = 20;
