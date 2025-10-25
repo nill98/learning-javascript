@@ -1,50 +1,39 @@
-console.log("Check Destructuring")
+console.log("Check Destructuring");
 
 let numbers = [1, 2, 3];
-
-
-
-
 
 //Skip elements
 let [first, , third] = [10, 20, 30];
 console.log(first); // 10
 console.log(third); // 30
 
-
 // Default Values
-let [x = 100, y = 200] = [5,60,33];
+let [x = 100, y = 200] = [5, , 60, 33];
 console.log(x); // 5
 console.log(y); // 200 (because 2nd value was missing)
-
-
-
 
 // Object Destructuring
 let user = {
   name: "Maruf",
   age: 25,
-  city: "Sylhet"
+  city: "Sylhet",
 };
 
 let { name, age } = user;
 
 console.log(name); // "Maruf"
-console.log(age);  // 25
-
+console.log(age); // 25
 
 // Rename variables
 let { city: hometown } = user;
 
 console.log(hometown); // "Sylhet"
 
-
 // Default values
 
 let { email = "Not provided" } = user;
 
-console.log(email); // "Not provided"
-
+console.log("Email: ", email); // "Not provided"
 
 // Destructuring in function parameters
 
@@ -54,10 +43,9 @@ function greet({ name, city }) {
 
 greet(user); // Hi Maruf from Sylhet
 
-
-
 //===============================================//
 
+console.log("-------------");
 // You are given the following data:
 
 const student = {
@@ -65,8 +53,8 @@ const student = {
   scores: [85, 90, 78],
   address: {
     city: "Sylhet",
-    zip: 3100
-  }
+    zip: 3100,
+  },
 };
 
 // ✅ Task:
@@ -78,38 +66,36 @@ const student = {
 
 // city from address
 
-let {fullName , scores: [math, English, Science], address: {city} } = student;
+let {
+  fullName,
+  scores: [math, English, Science],
+  address: { city },
+} = student;
 
-
-console.log (fullName);
-console.log (`scores: match:${math} English:${English} Science:${Science}`);
-console.log (city);
-
+console.log(fullName);
+console.log(`scores: math:${math} English:${English} Science:${Science}`);
+console.log(city);
 
 //==================================================================================//
 
+console.log("--------------");
 // Spred
-
 
 let nums = [1, 2, 3];
 let copied = [...nums]; // creates a new array
-console.log(copied); // [1, 2, 3]
-
+console.log("copied: " + copied); // [1, 2, 3]
 
 let a = [1, 2];
 let b = [3, 4];
 let merged = [...a, ...b];
-console.log(merged); // [1, 2, 3, 4]
-
+console.log("Merged: " + merged); // [1, 2, 3, 4]
 
 let user2 = { name: "Maruf" };
 let moreInfo = { age: 25 };
 let fullUser = { ...user2, ...moreInfo };
-console.log(fullUser); // { name: "Maruf", age: 25 }
-
+console.log("full user Object: ", fullUser); // { name: "Maruf", age: 25 }
 
 //======================================================//
-
 
 // Rest
 function sum(...numbers) {
@@ -118,31 +104,27 @@ function sum(...numbers) {
 
 console.log(sum(1, 2, 3)); // 6
 
-
 // Rest in distructuring
 let [first1, ...rest] = [10, 20, 30, 40];
 console.log(first1); // 10
-console.log("rest: " + rest);  // [20, 30, 40]
+console.log("rest: " + rest); // [20, 30, 40]
 
-
-// Object distructuring 
+// Object distructuring
 
 let { name1, ...otherDetails } = { name1: "Maruf", age: 25, city: "Sylhet" };
-console.log(name1);         // Maruf
+console.log(name1); // Maruf
 console.log(otherDetails); // { age: 25, city: "Sylhet" }
-console.log(typeof(otherDetails));
+console.log(typeof otherDetails);
 
 //===============================================//
 
 // You're given a user profile object:
 
-
-
 const profile = {
   name2: "Mustak",
   age: 25,
   city: "Sylhet",
-  profession: "Developer"
+  profession: "Developer",
 };
 
 // Tasks:
@@ -153,12 +135,12 @@ const profile = {
 // Adds a new field: country: "Bangladesh"
 // Use the spread operator for this.
 
-let { name2, ...otherInfo} = profile;
+let { name2, ...otherInfo } = profile;
 
 console.log("Profile Name: " + name2);
 console.log("Other Information: ", otherInfo);
 
-let newProfile = {...profile};
+let newProfile = { ...profile };
 
 newProfile.country = "Bangladesh";
 
